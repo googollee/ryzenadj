@@ -21,3 +21,6 @@ RUN apt-get update && \
 COPY --from=build /root/RyzenAdj/build/ryzenadj /bin/ryzenadj
 
 RUN ldd /bin/ryzenadj
+
+ENTRYPOINT ["/bin/ryzenadj"]
+CMD ["-h"]
